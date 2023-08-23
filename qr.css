@@ -1,0 +1,462 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+/*========================================================================*/
+                             /*HEADER*/
+
+                             header{ 
+                              position: fixed;
+                              top:0;
+                              left:0;
+                              width:100% ;
+                              background-color: var(--bg-color);
+                              box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
+                              z-index: 100;
+                          }     
+                          
+                          .nav{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 20px 0;
+                          }
+                         
+                          .logo{
+                            font-size: 1.5rem;
+                            font-weight: 600;
+                            color: #111;
+                            text-transform: uppercase;
+                            text-decoration: none;
+                            padding-left: 2rem;
+                          } 
+                          .logo span{
+                             color: #fc0404;
+                             font-weight: 700;
+                         
+                          }
+                          
+                          #cart-icon{
+                            font-size: 1.8rem;
+                            cursor: pointer;
+                          }
+                         
+                         
+                         /*=====CART====*/
+                         .cart{
+                            position: fixed;
+                            top: 0;
+                            right: 0;
+                            right: -100%;
+                            /*=====ALL RIGHTS RESERVED BY M.AHMER=====*/
+                            width: 360px;
+                            height: 100vh;
+                            overflow-y: auto;
+                            overflow-x: hidden;
+                            padding: 20px;
+                            background-color: var(--bg-color);
+                            box-shadow: -2px solid hsl(0 4% 15% / 10%);
+                            border: 1px solid var(--main-color);
+                            transition: 1.5s;
+                         }
+                         
+                         .cart.active{
+                            right: 0;
+                            transition: .3s;
+                         
+                         }
+                         .cart-title{
+                            text-align: center;
+                            font-size: 1.5rem;
+                            font-weight: 600;
+                            margin-top: 2rem;
+                         }
+                         .cart-box{
+                            display: grid;
+                            grid-template-columns: 32% 50% 18%;
+                            align-items: center;
+                            gap: 1rem;
+                            margin-top: 1rem;
+                         }
+                         .cart-img{
+                            width: 100px;
+                            height: 100px;
+                            object-fit: contain;
+                            padding: 10px;
+                         }
+                         
+                         
+                         .detail-box{
+                            display: grid;
+                            row-gap: .5rem;
+                         }
+                         .cart-product-title{
+                                font-size: 1rem;
+                                text-transform: uppercase;
+                         }
+                         .cart-price{
+                            font-weight: 500;
+                         }
+                         .cart-quantity{
+                            border: 1px solid var(--text-color);
+                            outline-color:var(--main-color);
+                            width: 2.4rem;
+                            text-align: center;
+                            font-size: 1rem;
+                         }
+                         .cart-remove{
+                            font-size: 24px;
+                            color: var(--main-color);
+                            cursor: pointer;
+                         }
+                         .total{
+                            display: flex;
+                            justify-content: flex-end;
+                            margin-top: 1.5rem;
+                            border-top: 1px solid var(--text-color);
+                         }
+                         .total-title{
+                            font-size: 1rem;
+                            font-weight: 600;
+                         }
+                         .total-price{
+                            margin-left: .5rem;
+                         }
+                         
+                         .btn-buy{
+                            display: flex;
+                            margin: 1.5rem auto 0 auto;
+                            padding: 12px 20px;
+                            border: none;
+                            background-color: var(--main-color);
+                            font-size: 1rem;
+                            font-weight:500;
+                            cursor: pointer;
+                         }
+                         .btn-buy:hover{
+                              color: white;
+                         }
+                         #cart-close{
+                            position: absolute;
+                            top:1rem;
+                            right: .8rem;
+                            font-size: 2rem;
+                            color: var(--text-color);
+                            cursor: pointer;
+                         }
+
+
+body{
+  display: flex;
+  align-items: center;
+ justify-content: center;
+ min-height: 100vh;
+ background: #fff; 
+}
+.wrapper
+{
+  width: 420px;
+ background: red;
+ padding: 30px 30px 35px;
+ border-radius: 7px;
+height: 270px;
+transition: height 0.2s ease;
+}
+.wrapper.active
+{
+  height: 525px;
+}
+.qr
+{
+  font-size: 4rem;
+
+}
+
+
+.wrapper form
+{  height: 210px;
+  cursor: pointer;
+  background: #fff;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  border-radius: 7px;
+ align-items: center;
+ transition: height 0.2s ease;
+}
+.wrapper.active form
+{
+  height: 225px;
+  pointer-events: none;
+}
+
+form .qr
+{
+  display:none ;
+  max-width: 148px;
+}
+
+.wrapper.active form ion-icon{
+  display: block;
+}
+.wrapper.active form .content  
+{
+  display: none;
+}
+
+form .content  ion-icon
+{
+  color: blue;
+  font-size: 55px;
+}
+
+form .content  p
+{
+font-size: 20px;
+color: black;
+margin-top: 15px;
+}
+
+.wrapper .details
+{
+  margin-top: 25px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.wrapper.active .details
+{
+
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s 0.05s ease;
+}
+.details textarea
+{
+  width: 100%;
+  height: 129px;
+  padding: 10px 15px ;
+  background: none;
+  outline: none;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+  border:1px solid #fff;
+}
+
+.details .buttons
+{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+
+}
+
+.buttons button
+{
+  height: 55px;
+  outline: none;
+  border: none;
+  width: calc(100% / 2 - 10px);
+  color:white ;
+  background: black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  
+
+}
+
+
+
+
+
+/*=================Responsive and break points=========================*/
+
+@media(max-width: 1080px){
+  .nav{
+     padding: 15px;
+  }
+  .container{
+     width: 90%;
+     margin: 0 auto;
+  }
+  section{
+     padding: 3rem 0 2rem;
+
+  }
+  .shop{
+     margin-top: 2rem ;
+  }
+  .wrapper
+  {
+    width: 420px;
+    background: rgb(0, 0, 255);
+    padding: 30px 30px 35px;
+    border-radius: 7px;
+   height: 270px;
+   transition: height 0.2s ease;
+  }
+}
+
+/* ----pre loader for this ot that by ahmer */
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#preloader
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 10000;
+    overflow: hidden;
+}
+
+
+
+.preloader-logo
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+;
+}
+
+#layer-1
+{
+animation:animationOne -0.5s linear 0.8s infinite alternate;
+
+}
+
+#layer-2
+{
+    animation:animationTwo 0.8s linear 0.8s infinite alternate;
+}
+
+@keyframes animationOne
+{
+    0%
+    {
+        opacity: 100;
+        fill: #ffffff;
+    }
+    100%
+    {
+        opacity: 0;
+        fill: #000000;
+    }
+}
+@keyframes animationTwo
+{
+    0%
+    {
+        opacity: 100;
+        fill: #ffffff;
+    }
+    100%
+    {
+        opacity: 0;
+        fill: #000000;
+    }
+}
+
+
+
+
+
+
+/* ----pre loader for this ot that by ahmer */
+
+
+
+/* for media device */
+@media(max-width: 450px){
+  .nav{
+     padding: 15px;
+
+  }
+  .logo{
+     font-size: 1.7rem;
+
+  }
+  .cart{
+     width: 320px;
+
+  }
+  .product-img
+  {
+     width: 90%;
+  }
+  .product-box
+  {
+     padding-right: 3rem;
+  }
+  .product-box .add-cart
+  {
+     padding-right: 5rem;
+     border-radius: 20px;
+  }
+  .wrapper
+  {
+    width: 320px;
+    background: red;
+    padding: 30px 30px 35px;
+    border-radius: 7px;
+   height: 270px;
+   transition: height 0.2s ease;
+  }
+  .wrapper.active form
+{
+  height: 115px;
+  pointer-events: none;
+}
+.wrapper.active
+{
+  height: 375px;
+}
+
+}
+/*for small supported devices */
+@media(max-width: 320px){
+
+  .shop{
+     margin-top: 1rem;
+  }
+  .cart{
+     width: 270px;
+  }
+  .wrapper
+  {
+    width: 260px;
+    /* background: rgb(0, 0, 255); */
+    padding: 30px 30px 35px;
+    border-radius: 7px;
+   height: 270px;
+   transition: height 0.2s ease;
+  }
+  .wrapper.active
+  {
+    height: 320px;
+  }
+}
+
+
