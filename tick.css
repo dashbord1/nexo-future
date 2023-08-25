@@ -88,7 +88,10 @@ body{
     transition: 0.5s;
     visibility: hidden;
 }
-
+.content p span
+{
+ color: red;
+}
 .card:hover .content
 {
     left: 0;
