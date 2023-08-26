@@ -247,9 +247,10 @@ animation:animationOne -0.5s linear 0.8s infinite alternate;
         align-items: flex-start;
         
     }
-    .card:hover
+  
+  .card:hover
     {
-        height: 380px;
+        height: 450px;
         width: 250px;
     }
     .card:hover .product-img
