@@ -314,7 +314,7 @@ animation:animationOne -0.5s linear 0.8s infinite alternate;
 
 
 
-@media(max-width:340px)
+@media(max-width:360px)
 {
     header
     {   
@@ -334,7 +334,7 @@ animation:animationOne -0.5s linear 0.8s infinite alternate;
     }
     .sci{
         right: 15px;
-        bottom: 50px;
+        bottom: 30px;
     }
     .sci li a
     {
