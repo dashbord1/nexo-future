@@ -91,6 +91,8 @@ body{
 .content p span
 {
  color: red;
+  font-size:0.5rem;
+  
 }
 .card:hover .content
 {
@@ -258,7 +260,7 @@ animation:animationOne -0.5s linear 0.8s infinite alternate;
   
   .card:hover
     {
-        height: 400px;
+        height: 420px;
         width: 250px;
     }
     .card:hover .product-img
