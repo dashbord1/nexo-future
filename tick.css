@@ -166,6 +166,12 @@ body{
 ;
 }
 
+.question
+{
+  font-size:1rem;
+  background-color:transparent;
+}
+
 #layer-1
 {
 animation:animationOne -0.5s linear 0.8s infinite alternate;
