@@ -358,4 +358,18 @@ animation:animationOne -0.5s linear 0.8s infinite alternate;
         display: block;
         padding-left: 2px;
     }
+  
+.main .toturial .you
+{
+    color: red;
+    font-size: 1rem;
+    padding-right: 3px;
+}
+
+.main .toturial
+{  position: absolute;
+    font-size: 0.8rem;
+    top: 190px;
+    left: 108px;
+}
 }
