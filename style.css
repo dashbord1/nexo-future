@@ -129,6 +129,19 @@ header .logo span{
     text-decoration: none;
 }
 
+.main .toturial .you
+{
+    color: red;
+    font-size: 1.2rem;
+    padding-right: 3px;
+}
+
+.main .toturial
+{
+    font-size: 1rem;
+    padding-top: 100px;
+    padding-left: -30px;
+}
 
 .navigation{
     position: absolute;
