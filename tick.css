@@ -292,4 +292,13 @@ animation:animationOne -0.5s linear 0.8s infinite alternate;
   {
     font-size:0.8rem;
   }
+  
+
+ .content .question
+{
+  font-size:0.8rem;
+  background-color:transparent;
+  padding-left:120px;
+/*   paddind-top:10px; */
+}
 }
