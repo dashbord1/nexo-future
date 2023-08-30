@@ -168,9 +168,10 @@ body{
 
  .content .question
 {
-  font-size:1rem;
+  font-size:0.8rem;
   background-color:transparent;
   padding-left:120px;
+  paddind-top:10px;
 }
 
 #layer-1
@@ -257,7 +258,7 @@ animation:animationOne -0.5s linear 0.8s infinite alternate;
   
   .card:hover
     {
-        height: 450px;
+        height: 400px;
         width: 250px;
     }
     .card:hover .product-img
